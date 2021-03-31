@@ -1,2 +1,5 @@
+#
+# for /etc/crontab
+#
 # Check raid status each hour, send status message once per day if no errors
-25 * * * * /root/raid_check/send-notice.sh 
+25 * * * * root /bin/bash /root/raid_check/send-notice.sh 

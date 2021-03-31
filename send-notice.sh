@@ -1,5 +1,7 @@
 #! /bin/bash
 
+export LC_ALL=en_US.UTF-8
+
 mailto="lopez@uci.edu"
 errorsto="lopez@uci.edu"
 scriptdir="/root/raid_check"
@@ -20,7 +22,7 @@ then
 fi
 
 tmpfile="$scriptdir/chk-raid-$$"
-$scriptdir/compare.py $masterfile > $tmpfile
+python3 $scriptdir/compare.py $masterfile > $tmpfile
 if [ $? != 0 ]
 then
     # found problems
